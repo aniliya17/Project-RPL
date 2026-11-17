@@ -1,0 +1,127 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="deploy-mochi" name="Deployment Diagram">
+    <mxGraphModel dx="1800" dy="1049" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=22;fontStyle=1;" value="DEPLOYMENT DIAGRAM – SISTEM PRE-ORDER MOCHI" vertex="1">
+          <mxGeometry height="40" width="800" x="380" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="frame" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=260;height=30;fontStyle=1;fillColor=none;" value="deployment Sistem Pre-Order Mochi" vertex="1">
+          <mxGeometry height="650" width="1540" x="20" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="client" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=12;verticalAlign=top;fillColor=#f8cecc;strokeColor=#b85450;container=1;collapsible=0;recursiveResize=0;" value="«device»&lt;br&gt;&lt;b&gt;Client Device&lt;/b&gt;" vertex="1">
+          <mxGeometry height="190" width="200" x="50" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="client_browser" parent="client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Web Browser&lt;/b&gt;&lt;br&gt;(Chrome, Firefox, Edge)" vertex="1">
+          <mxGeometry height="60" width="160" x="15" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="client_ui" parent="client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="«artifact»&lt;br&gt;&lt;b&gt;Responsive Web UI&lt;/b&gt;&lt;br&gt;(PC / Laptop / Smartphone)" vertex="1">
+          <mxGeometry height="55" width="160" x="15" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="internet" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=12;fillColor=#f8cecc;strokeColor=#b85450;" value="«node»&lt;br&gt;&lt;b&gt;Internet&lt;/b&gt;" vertex="1">
+          <mxGeometry height="90" width="110" x="340" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="web" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=12;verticalAlign=top;fillColor=#f8cecc;strokeColor=#b85450;container=1;collapsible=0;recursiveResize=0;" value="«node»&lt;br&gt;&lt;b&gt;Web Server&lt;/b&gt;" vertex="1">
+          <mxGeometry height="300" width="240" x="540" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="web_nginx" parent="web" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Nginx&lt;/b&gt;&lt;br&gt;(Reverse Proxy &amp;amp; SSL/TLS)" vertex="1">
+          <mxGeometry height="90" width="190" x="20" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="web_static" parent="web" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="«artifact»&lt;br&gt;&lt;b&gt;Static Assets&lt;/b&gt;&lt;br&gt;(.css, .js, gambar)" vertex="1">
+          <mxGeometry height="90" width="190" x="20" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="app" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=12;verticalAlign=top;fillColor=#f8cecc;strokeColor=#b85450;container=1;collapsible=0;recursiveResize=0;" value="«node»&lt;br&gt;&lt;b&gt;Application Server&lt;/b&gt;" vertex="1">
+          <mxGeometry height="300" width="280" x="900" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="app_docker" parent="app" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;verticalAlign=top;fontSize=11;container=1;collapsible=0;recursiveResize=0;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Docker Container&lt;/b&gt;" vertex="1">
+          <mxGeometry height="235" width="240" x="15" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="app_runtime" parent="app_docker" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" value="«executionEnvironment»&lt;br&gt;&lt;b&gt;Laravel / Node.js&lt;/b&gt;&lt;br&gt;(REST API, arsitektur MVC)" vertex="1">
+          <mxGeometry height="55" width="220" x="10" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="app_art1" parent="app_docker" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" value="«artifact»&lt;br&gt;&lt;b&gt;mochi-preorder-app&lt;/b&gt;&lt;br&gt;(Aplikasi Pre-Order Mochi)" vertex="1">
+          <mxGeometry height="55" width="220" x="10" y="105" as="geometry" />
+        </mxCell>
+        <mxCell id="app_art2" parent="app_docker" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" value="«artifact»&lt;br&gt;&lt;b&gt;.env&lt;/b&gt; (konfigurasi runtime)" vertex="1">
+          <mxGeometry height="50" width="220" x="10" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=12;verticalAlign=top;fillColor=#f8cecc;strokeColor=#b85450;container=1;collapsible=0;recursiveResize=0;" value="«node»&lt;br&gt;&lt;b&gt;Database Server&lt;/b&gt;" vertex="1">
+          <mxGeometry height="170" width="280" x="900" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="db_mysql" parent="db" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="«database»&lt;br&gt;&lt;b&gt;MySQL / PostgreSQL&lt;/b&gt;&lt;br&gt;(User, Pesanan, Rasa, Resep,&lt;br&gt;Kapasitas Harian)" vertex="1">
+          <mxGeometry height="95" width="230" x="20" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="fs" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=12;verticalAlign=top;fillColor=#f8cecc;strokeColor=#b85450;container=1;collapsible=0;recursiveResize=0;" value="«node»&lt;br&gt;&lt;b&gt;File Storage Server&lt;/b&gt;" vertex="1">
+          <mxGeometry height="170" width="230" x="1300" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="fs_art" parent="fs" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="«artifact»&lt;br&gt;&lt;b&gt;Bukti Pembayaran&lt;/b&gt;&lt;br&gt;(Upload, maks. 5 MB)" vertex="1">
+          <mxGeometry height="85" width="180" x="20" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="bk" parent="1" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;size=12;verticalAlign=top;fillColor=#f8cecc;strokeColor=#b85450;container=1;collapsible=0;recursiveResize=0;" value="«node»&lt;br&gt;&lt;b&gt;Backup Server&lt;/b&gt;" vertex="1">
+          <mxGeometry height="170" width="240" x="540" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="bk_art" parent="bk" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" value="«artifact»&lt;br&gt;&lt;b&gt;backup-harian.sql&lt;/b&gt;&lt;br&gt;(Backup otomatis harian)" vertex="1">
+          <mxGeometry height="85" width="190" x="20" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="client" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" target="internet" value="HTTPS&lt;br&gt;(443)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="internet" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" target="web" value="HTTPS&lt;br&gt;(443)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="web" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="app" value="HTTP&lt;br&gt;(8080)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="app" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="db" value="TCP&lt;br&gt;(3306)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="app" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=#ffffff;dashed=1;edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="fs" value="HTTPS / SFTP&lt;br&gt;(443 / 22)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="db" style="endArrow=none;html=1;rounded=0;labelBackgroundColor=#ffffff;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="bk" value="SFTP&lt;br&gt;(22)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="leg" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;fillColor=#ffffff;strokeColor=#000000;arcSize=4;" value="&lt;b&gt;KETERANGAN&lt;/b&gt;" vertex="1">
+          <mxGeometry height="215" width="270" x="20" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1s" parent="1" style="shape=cube;whiteSpace=wrap;html=1;size=6;fillColor=#f8cecc;strokeColor=#b85450;" value="" vertex="1">
+          <mxGeometry height="25" width="35" x="35" y="765" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1t" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;" value="Node (Perangkat Fisik / Virtual)" vertex="1">
+          <mxGeometry height="25" width="205" x="80" y="765" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2s" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="25" width="35" x="35" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2t" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" value="Execution Environment / Artifact / Database (di dalam node)" vertex="1">
+          <mxGeometry height="35" width="205" x="80" y="795" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3s" edge="1" parent="1" style="endArrow=none;html=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="35" y="855" as="sourcePoint" />
+            <mxPoint x="70" y="855" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg3t" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" value="Communication Path (Jalur Komunikasi)" vertex="1">
+          <mxGeometry height="30" width="205" x="80" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="leg4s" edge="1" parent="1" style="endArrow=none;html=1;dashed=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="35" y="895" as="sourcePoint" />
+            <mxPoint x="70" y="895" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg4t" parent="1" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" value="Komunikasi Eksternal / Pendukung" vertex="1">
+          <mxGeometry height="30" width="205" x="80" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="desc" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;spacingRight=10;fontSize=11;fillColor=#ffffff;strokeColor=#000000;arcSize=3;" value="&lt;b&gt;DESKRIPSI DEPLOYMENT&lt;/b&gt;&lt;br&gt;&lt;br&gt;1. Pelanggan dan Admin mengakses sistem melalui Web Browser (PC/laptop/smartphone) lewat Internet menggunakan HTTPS (port 443).&lt;br&gt;2. Request diterima Web Server (Nginx) sebagai reverse proxy lalu diteruskan ke Application Server.&lt;br&gt;3. Application Server menjalankan aplikasi Pre-Order Mochi (Laravel/Node.js, MVC, REST API) dalam Docker Container pada port 8080.&lt;br&gt;4. Aplikasi terhubung ke Database Server (MySQL) untuk menyimpan data user, pesanan, rasa, resep, dan kapasitas harian (port 3306).&lt;br&gt;5. Bukti pembayaran (maks. 5 MB) disimpan pada File Storage Server melalui HTTPS/SFTP.&lt;br&gt;6. Database di-backup otomatis setiap hari ke Backup Server." vertex="1">
+          <mxGeometry height="215" width="720" x="310" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="spec" parent="1" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=10;spacingTop=6;spacingRight=10;fontSize=11;fillColor=#ffffff;strokeColor=#000000;arcSize=3;" value="&lt;b&gt;SPESIFIKASI NODE&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Client Device&lt;/b&gt; : Laptop/PC/Smartphone dengan browser modern.&lt;br&gt;&lt;b&gt;Web Server&lt;/b&gt; : Nginx reverse proxy &amp;amp; static assets (Linux/Windows).&lt;br&gt;&lt;b&gt;Application Server&lt;/b&gt; : Aplikasi Laravel/Node.js dalam Docker.&lt;br&gt;&lt;b&gt;Database Server&lt;/b&gt; : MySQL/PostgreSQL penyimpanan data utama.&lt;br&gt;&lt;b&gt;File Storage Server&lt;/b&gt; : Penyimpanan file bukti pembayaran.&lt;br&gt;&lt;b&gt;Backup Server&lt;/b&gt; : Penyimpanan backup data harian." vertex="1">
+          <mxGeometry height="215" width="510" x="1050" y="730" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
